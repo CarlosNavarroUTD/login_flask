@@ -1,0 +1,36 @@
+notas_system/
+│
+├── app/
+│   ├── __init__.py
+│   ├── usuarios/
+│   │   ├── __init__.py
+│   │   ├── views.py
+│   │   ├── models.py
+│   │   └── forms.py
+│   │
+│   ├── notas/
+│   │   ├── __init__.py
+│   │   ├── views.py
+│   │   ├── models.py
+│   │   └── forms.py
+│   │
+│   ├── templates/
+│   │   ├── usuarios/
+│   │   │   └── login.html
+│   │   │   └── register.html
+│   │   ├── notas/
+│   │   │   └── notas.html
+│   │   ├── base.html
+│   │   └── index.html
+│   │
+│   ├── static/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── images/
+│   │
+│   └── conexion.py
+│   └── funciones.py
+│
+├── run.py
+├── config.py
+├── requirements.txt

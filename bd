@@ -1,0 +1,25 @@
+-- Create the database
+CREATE DATABASE bd_notas;
+
+-- Use the newly created database
+USE bd_notas;
+
+-- Create the Usuarios table
+CREATE TABLE Usuarios (
+    id INT(25) PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100),
+    apellidos VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(100),
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create the Notas table
+CREATE TABLE Notas (
+    id INT(25) PRIMARY KEY AUTO_INCREMENT,
+    usuario_id INT(25) NOT NULL,
+    titulo VARCHAR(200) NOT NULL,
+    descripcion LONGTEXT,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES Usuarios(id)
+);

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Aqui podrás ver y agregar tus notas</h1>
+<p>por ahora solo agregar con:</p>
+
+<div class="note-form">
+  <h2>Agregar nota</h2>
+  <form action="{{ url_for('notas.create') }}" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.titulo.label }} {{ form.titulo() }}<br><br>
+    {{ form.descripcion.label }} {{ form.descripcion() }}<br><br>
+    {{ form.submit() }}
+  </form>
+</div>
+
+{% endblock %}

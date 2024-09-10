@@ -1,0 +1,76 @@
+
+/* Estilos de la barra lateral */
+.sidebar {
+    position: fixed;
+    /*top: 60px;*/
+    left: 0;
+    height: 100%;
+    width: 60px;
+    background-color: #00476e;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+.sidebar:hover {
+    width: 220px;
+}
+
+
+/* Estilos del menú */
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 10px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.menu img {
+    width: 22px;
+    height: auto;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.menu-text {
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 18px;
+}
+
+.sidebar:hover .menu-text {
+    opacity: 1;
+}
+
+/* Estilos para el contenido principal */
+main {
+    margin-left: 60px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+body.sidebar-expanded main {
+    margin-left: 200px;
+}
+
+
+.logo {
+    background-color: #00476e;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .logo img {
+    width: 100px; /* ajusta el tamaño del logo */
+    height: auto;
+  } 

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Registro</h2>
+<form method="POST" action="{{ url_for('usuarios.registro') }}">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.nombre.label }}
+        {{ form.nombre() }}
+    </div>
+    <div>
+        {{ form.apellidos.label }}
+        {{ form.apellidos() }}
+    </div>
+    <div>
+        {{ form.email.label }}
+        {{ form.email() }}
+    </div>
+    <div>
+        {{ form.password.label }}
+        {{ form.password() }}
+    </div>
+    <div>
+        {{ form.confirm_password.label }}
+        {{ form.confirm_password() }}
+    </div>
+    <div>
+        {{ form.submit() }}
+    </div>
+</form>
+<p>¿Ya tienes una cuenta? <a href="{{ url_for('usuarios.login') }}">Inicia sesión aquí</a></p>
+{% endblock %}
