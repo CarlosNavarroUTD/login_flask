@@ -5,7 +5,7 @@ CREATE DATABASE bd_notas;
 USE bd_notas;
 
 -- Create the Usuarios table
-CREATE TABLE Usuarios (
+CREATE TABLE usuarios (
     id INT(25) PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(100),
     apellidos VARCHAR(100),
@@ -15,11 +15,11 @@ CREATE TABLE Usuarios (
 );
 
 -- Create the Notas table
-CREATE TABLE Notas (
+CREATE TABLE notas (
     id INT(25) PRIMARY KEY AUTO_INCREMENT,
     usuario_id INT(25) NOT NULL,
     titulo VARCHAR(200) NOT NULL,
     descripcion LONGTEXT,
     fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (usuario_id) REFERENCES Usuarios(id)
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
